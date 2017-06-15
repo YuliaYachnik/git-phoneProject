@@ -6,26 +6,28 @@ import org.parsing.ParseArguments;
 
 import java.util.ArrayList;
 
-public class Options implements commands{
+public class Options implements commands {
 
     private ArrayList<Data> person = new ArrayList<Data>();
     private ArrayList<Data> personFindOut = new ArrayList<Data>();
-    private  ArrayList<Data> personListOut = new ArrayList<Data>();
-    public Options(){}
+    private ArrayList<Data> personListOut = new ArrayList<Data>();
+
+    public Options() {
+    }
 
 
     public void add(ParseArguments parseArguments) {
-        try{
-            if(parseArguments == null)
+        try {
+            if (parseArguments == null)
                 throw new Exception();
-            else{
-                Data data = new Data(parseArguments.getName(),parseArguments.getPhone(),parseArguments.getFile(), parseArguments.getFiledir());
+            else {
+                Data data = new Data(parseArguments.getName(), parseArguments.getPhone(), parseArguments.getFile(), parseArguments.getFiledir());
                 person.add(data);
                 FileWorker fileWorker = new FileWorker();
                 fileWorker.writeFile(data);
 
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Check the data! Please, use help-manager.");
             return;
         }
@@ -33,49 +35,47 @@ public class Options implements commands{
     }
 
     public void find(ParseArguments parseArguments) {
-       try{
-           if(parseArguments == null)
-               throw new Exception();
-           else{
-               String filename = parseArguments.getFile();
-               String dirname = parseArguments.getFiledir();
-               String name = parseArguments.getName();
-              FileWorker fileWorker = new FileWorker();
-               personFindOut = fileWorker.findInFile(name,filename,dirname);
-               if(personFindOut.size() != 0){
-                   for(int i = 0; i < personFindOut.size(); i++){
-                       System.out.println(personFindOut.get(i));
-                   }
-               }
-               else
-                   System.out.println("No data found! Please, use help-manager.");
-           }
+        try {
+            if (parseArguments == null)
+                throw new Exception();
+            else {
+                String filename = parseArguments.getFile();
+                String dirname = parseArguments.getFiledir();
+                String name = parseArguments.getName();
+                FileWorker fileWorker = new FileWorker();
+                personFindOut = fileWorker.findInFile(name, filename, dirname);
+                if (personFindOut.size() != 0) {
+                    for (int i = 0; i < personFindOut.size(); i++) {
+                        System.out.println(personFindOut.get(i));
+                    }
+                } else
+                    System.out.println("No data found! Please, use help-manager.");
+            }
 
-       }catch(Exception e){
-           System.out.println("No data found! Please, use help-manager.");
-           return;
-       }
+        } catch (Exception e) {
+            System.out.println("No data found! Please, use help-manager.");
+            return;
+        }
 
     }
 
     public void list(ParseArguments parseArguments) {
-        try{
-            if(parseArguments == null)
+        try {
+            if (parseArguments == null)
                 throw new Exception();
-            else{
+            else {
                 String filename = parseArguments.getFile();
                 String dirname = parseArguments.getFiledir();
                 FileWorker fileWorker = new FileWorker();
-                personListOut = fileWorker.readFile(filename,dirname);
-                if(personListOut.size() != 0){
-                    for(int i = 0; i < personListOut.size(); i++){
+                personListOut = fileWorker.readFile(filename, dirname);
+                if (personListOut.size() != 0) {
+                    for (int i = 0; i < personListOut.size(); i++) {
                         System.out.println(personListOut.get(i));
                     }
-                }
-                else
+                } else
                     System.out.println("No data found! Please, use help-manager.");
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("No data found! Please, use help-manager.");
             return;
         }
