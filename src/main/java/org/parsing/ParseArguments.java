@@ -3,7 +3,7 @@ package org.parsing;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ParseArguments {
+public  class ParseArguments {
 
     private String name = "";
     private String phone = "";
@@ -77,6 +77,52 @@ public class ParseArguments {
         this.phone = phone;
     }
 
+    public static boolean checkNameSymbol(String str) {
+        Pattern p = Pattern.compile("^--name=+[a-zA-ZА-Яа-я]{3,15}$");
+        Matcher m = p.matcher(str);
+        return m.matches();
+    }
+
+    public String getName(String str) throws Exception {
+        try {
+            String returnName = "";
+            if (checkNameSymbol(str) == true) {
+                for (String value : str.split("=")) {
+                    returnName = value;
+                }
+                return returnName;
+            } else {
+                throw new Exception();
+            }
+        } catch (Exception e) {
+            System.out.println("Incorrect name data.Please,use help-manager.");
+            return null;
+        }
+    }
+
+    public static boolean checkPhoneSymbol(String str) {
+        Pattern p = Pattern.compile("^--phone=+[0-9]{3,20}$");
+        Matcher m = p.matcher(str);
+        return m.matches();
+    }
+
+    public String getPhone(String str) throws Exception {
+        try {
+            if (checkPhoneSymbol(str) == true) {
+                String returnPhone = "";
+                for (String value : str.split("=")) {
+                    returnPhone = value;
+                }
+                return returnPhone;
+            } else {
+                throw new Exception();
+            }
+        } catch (Exception e) {
+            System.out.println("Incorrect phone number. Please,use help-manager.");
+            return null;
+        }
+    }
+
     public ParseArguments checkArgumentforHelp(String[] arguments) throws Exception {
         ParseArguments parseArguments = null;
         try {
@@ -127,7 +173,7 @@ public class ParseArguments {
         }
     }
 
-    public ParseArguments checkArgumentforFind(String[] arguments) throws Exception {
+   public ParseArguments checkArgumentforFind(String[] arguments) throws Exception {
         ParseArguments parseArguments = null;
         try {
             int countArguments = arguments.length;
@@ -213,19 +259,8 @@ public class ParseArguments {
         }
     }
 
-    public static boolean checkNameSymbol(String str) {
-        Pattern p = Pattern.compile("^--name=+[a-zA-ZА-Яа-я]{3,15}$");
-        Matcher m = p.matcher(str);
-        return m.matches();
-    }
 
-    public static boolean checkPhoneSymbol(String str) {
-        Pattern p = Pattern.compile("^--phone=+[0-9]{3,20}$");
-        Matcher m = p.matcher(str);
-        return m.matches();
-    }
-
-    public static boolean checkFileName(String str) {
+   public static boolean checkFileName(String str) {
         Pattern p = Pattern.compile("\\[--filename=.+\\.txt\\]");
         Matcher m = p.matcher(str);
         return m.matches();
@@ -235,41 +270,6 @@ public class ParseArguments {
         Pattern p = Pattern.compile("\\[--dirname=+[a-zA-ZА-Яа-я0-9]{3,15}\\]");
         Matcher m = p.matcher(str);
         return m.matches();
-    }
-
-
-    public String getName(String str) throws Exception {
-        try {
-            String returnName = "";
-            if (checkNameSymbol(str) == true) {
-                for (String value : str.split("=")) {
-                    returnName = value;
-                }
-                return returnName;
-            } else {
-                throw new Exception();
-            }
-        } catch (Exception e) {
-            System.out.println("Incorrect name data.Please,use help-manager.");
-            return null;
-        }
-    }
-
-    public String getPhone(String str) throws Exception {
-        try {
-            if (checkPhoneSymbol(str) == true) {
-                String returnPhone = "";
-                for (String value : str.split("=")) {
-                    returnPhone = value;
-                }
-                return returnPhone;
-            } else {
-                throw new Exception();
-            }
-        } catch (Exception e) {
-            System.out.println("Incorrect phone number. Please,use help-manager.");
-            return null;
-        }
     }
 
     public String getFileName(String str) throws Exception {
@@ -306,3 +306,4 @@ public class ParseArguments {
         }
     }
 }
+
