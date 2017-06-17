@@ -1,14 +1,9 @@
 package org.parsing;
 
-import org.services.Command;
-import org.services.add.AddCommandImpl;
-import org.services.add.CommandAddDefinition;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public  class ParseArguments {
-
 
     private String name = "";
     private String phone = "";
@@ -50,11 +45,11 @@ public  class ParseArguments {
     public ParseArguments() {
     }
 
-    public ParseArguments(String name) {
+   public ParseArguments(String name) {
         this.name = name;
     }
 
-    public ParseArguments(String name, String phone, String file, String filedir) {
+   public ParseArguments(String name, String phone, String file, String filedir) {
         this.name = name;
         this.phone = phone;
         this.file = file;
@@ -129,16 +124,16 @@ public  class ParseArguments {
     }
 
 
-    public ParseArguments checkArgumentforHelp(String[] arguments) throws Exception {
+    public ParseArguments checkArgumentforHelp(String args[]) throws Exception {
         ParseArguments parseArguments = null;
         try {
-            int countArguments = arguments.length;
+            int countArguments = args.length;
             if (countArguments == 0)
                 System.out.println("No parameters have been entered.Please,use help-manager. ");
             else {
-                if ((arguments[0].equals("help") || arguments[0].equals("Help")) && countArguments > 1)
+                if ((args[0].equals("help") || args[0].equals("Help")) && countArguments > 1)
                     throw new ExceptionInInitializerError();
-                if (arguments[0].equals("help") || arguments[0].equals("Help")) {
+                if (args[0].equals("help") || args[0].equals("Help")) {
                     parseArguments = new ParseArguments();
                 }
             }
@@ -149,25 +144,49 @@ public  class ParseArguments {
         }
     }
 
-    public ParseArguments checkArgumentforList(String[] arguments) throws Exception {
+    public ParseArguments checkArgumentForList(String args[]) throws Exception {
         ParseArguments parseArguments = null;
         try {
-            int countArguments = arguments.length;
-            if (countArguments == 0)
-                System.out.println("No parameters have been entered.Please,use help-manager. ");
-            if ((arguments[0].equals("list") || arguments[0].equals("List")) && countArguments == 1) {
+            int countArguments = args.length;
+            if (countArguments == 1) parseArguments = new ParseArguments();
+            else if (countArguments == 2 ||countArguments > 3 ) throw new ExceptionInInitializerError();
+            else if (countArguments == 3) {
                 parseArguments = new ParseArguments();
-            } else if ((arguments[0].equals("list") || arguments[0].equals("List")) && countArguments == 2)
+                parseArguments.setFile(getFileName(args[1]));
+                parseArguments.setFiledir(getFileDir(args[2]));
+            }
+            else throw new ExceptionInInitializerError();
+            return parseArguments;
+        } catch (NullPointerException e) {
+            System.out.println("Error with passing parameters to the command line.Please,use help-manager");
+            return null;
+        } catch (ExceptionInInitializerError exceptionInInitializerError) {
+            System.out.println("Error of Initializing parameters.Please,use help-manager.");
+            return null;
+        }
+    }
+
+   public ParseArguments checkArgumentForFind(String args[]) throws Exception {
+        ParseArguments parseArguments = null;
+        try {
+            int countArguments = args.length;
+            if (countArguments < 2 || countArguments == 3)
                 throw new ExceptionInInitializerError();
-            else if ((arguments[0].equals("list") || arguments[0].equals("List")) && countArguments > 3)
-                throw new ExceptionInInitializerError();
-            else if ((arguments[0].equals("list") || arguments[0].equals("List")) && countArguments == 3 && (arguments[1].contains("--phone") || arguments[1].contains("--name"))
-                    && (arguments[2].contains("--name") || arguments[2].contains("--phone")))
-                throw new ExceptionInInitializerError();
-            else if ((arguments[0].equals("list") || arguments[0].equals("List")) && countArguments == 3) {
-                parseArguments = new ParseArguments();
-                parseArguments.setFile(getFileName(arguments[1]));
-                parseArguments.setFiledir(getFileDir(arguments[2]));
+            else if ( countArguments == 2) {
+                String bufName = getName(args[1]);
+                if (bufName == null) throw new NullPointerException();
+                else parseArguments = new ParseArguments(getName(args[1]));
+            } else if (countArguments == 4) {
+                String bufName = getName(args[1]);
+                String bufFileName = getFileName(args[2]);
+                String bufDirName = getFileDir(args[3]);
+                if (bufName == null || bufFileName == null || bufDirName == null) throw new NullPointerException();
+                else {
+                    parseArguments = new ParseArguments();
+                    parseArguments.setName(getName(args[1]));
+                    parseArguments.setFile(getFileName(args[2]));
+                    parseArguments.setFiledir(getFileDir(args[3]));
+                }
             }
             return parseArguments;
         } catch (NullPointerException e) {
@@ -179,82 +198,38 @@ public  class ParseArguments {
         }
     }
 
-   public ParseArguments checkArgumentforFind(String[] arguments) throws Exception {
-        ParseArguments parseArguments = null;
-        try {
-            int countArguments = arguments.length;
-            if (countArguments == 0)
-                System.out.println("No parameters have been entered.Please,use help-manager.");
-            else if (countArguments < 2)
-                throw new NullPointerException();
-            else if ((arguments[0].equals("find") || arguments[0].equals("Find")) && countArguments == 2) {
-                String bufName = getName(arguments[1]);
-                if (bufName == null)
-                    throw new NullPointerException();
-                else
-                    parseArguments = new ParseArguments(getName(arguments[1]));
-            } else if ((arguments[0].equals("find") || arguments[0].equals("Find")) && countArguments == 4) {
-                String bufName = getName(arguments[1]);
-                String bufFileName = getFileName(arguments[2]);
-                String bufDirName = getFileDir(arguments[3]);
-                if (bufName == null || bufFileName == null || bufDirName == null)
-                    throw new NullPointerException();
-                else {
-                    parseArguments = new ParseArguments();
-                    parseArguments.setName(getName(arguments[1]));
-                    parseArguments.setFile(getFileName(arguments[2]));
-                    parseArguments.setFiledir(getFileDir(arguments[3]));
-                }
-            } else if ((arguments[0].equals("find") || arguments[0].equals("Find")) && countArguments == 4 && arguments[2].contains("--phone="))
-                throw new ExceptionInInitializerError();
-            else if ((arguments[0].equals("find") || arguments[0].equals("Find")) && countArguments == 3)
-                throw new ExceptionInInitializerError();
-            return parseArguments;
-        } catch (NullPointerException e) {
-            System.out.println("Error with passing parameters to the command line.Please,use help-manager");
-            return null;
-        } catch (ExceptionInInitializerError exceptionInInitializerError) {
-            System.out.println("Error of Initializing parameters.Please,use help-manager.");
-            return null;
-        }
-    }
 
-
-    public ParseArguments checkArgumentforAdd(String[] arguments) throws Exception {
+    public ParseArguments checkArgumentForAdd(String args[]) throws Exception {
         ParseArguments parseArguments = null;
-        int countArguments = arguments.length;
+        int countArguments = args.length;
         try {
-            if (countArguments == 0)
-                System.out.println("No parameters have been entered.Please,use help-manager.");
-            else if (countArguments < 3)
+             if (countArguments < 3)
                 throw new NullPointerException();
-            else if ((arguments[0].equals("add") || arguments[0].equals("Add")) && countArguments == 3) {
-                String bufName = getName(arguments[1]);
-                String bufPhone = getPhone(arguments[2]);
+            else if ( countArguments == 3) {
+                String bufName = getName(args[1]);
+                String bufPhone = getPhone(args[2]);
                 if (bufName == null || bufPhone == null)
                     throw new NullPointerException();
                 else
-                    parseArguments = new ParseArguments(getName(arguments[1]), getPhone(arguments[2]));
-            } else if ((arguments[0].equals("add") || arguments[0].equals("Add")) && countArguments == 4 && arguments[3].contains("--filename=")) {
-                String bufName = getName(arguments[1]);
-                String bufPhone = getPhone(arguments[2]);
-                String bufFileName = getFileName(arguments[3]);
+                    parseArguments = new ParseArguments(getName(args[1]), getPhone(args[2]));
+            } else if ( countArguments == 4) {
+                String bufName = getName(args[1]);
+                String bufPhone = getPhone(args[2]);
+                String bufFileName = getFileName(args[3]);
                 if (bufName == null || bufPhone == null || bufFileName == null)
                     throw new NullPointerException();
                 else
-                    parseArguments = new ParseArguments(getName(arguments[1]), getPhone(arguments[2]), getFileName(arguments[3]));
-            } else if ((arguments[0].equals("add") || arguments[0].equals("Add")) && countArguments == 5) {
-                String bufName = getName(arguments[1]);
-                String bufPhone = getPhone(arguments[2]);
-                String bufFileName = getFileName(arguments[3]);
-                String bufDirName = getFileDir(arguments[4]);
+                    parseArguments = new ParseArguments(getName(args[1]), getPhone(args[2]), getFileName(args[3]));
+            } else if (countArguments == 5) {
+                String bufName = getName(args[1]);
+                String bufPhone = getPhone(args[2]);
+                String bufFileName = getFileName(args[3]);
+                String bufDirName = getFileDir(args[4]);
                 if (bufName == null || bufPhone == null || bufFileName == null || bufDirName == null)
                     throw new NullPointerException();
                 else
-                    parseArguments = new ParseArguments(getName(arguments[1]), getPhone(arguments[2]), getFileName(arguments[3]), getFileDir(arguments[4]));
-            } else if ((arguments[0].equals("add") || arguments[0].equals("Add")) && countArguments == 4 && arguments[3].contains("--dirname="))
-                throw new ExceptionInInitializerError();
-
+                    parseArguments = new ParseArguments(getName(args[1]), getPhone(args[2]), getFileName(args[3]), getFileDir(args[4]));
+            } else throw new ExceptionInInitializerError();
             return parseArguments;
         } catch (NullPointerException e) {
             System.out.println("Error with passing parameters to the command line.Please,use help-manager");

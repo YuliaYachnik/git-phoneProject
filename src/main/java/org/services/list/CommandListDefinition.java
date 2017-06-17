@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class CommandListDefinition {
      private ArrayList<Data> personListOut = new ArrayList<Data>();
 
-    CommandListDefinition(){}
+    public CommandListDefinition(){}
 
     public void list(ParseArguments parseArguments) {
         try {
