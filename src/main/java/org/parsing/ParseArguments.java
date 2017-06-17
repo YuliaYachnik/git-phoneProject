@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 
 public  class ParseArguments {
 
+
     private String name = "";
     private String phone = "";
     private String file = "phonebook.txt";
@@ -127,37 +128,6 @@ public  class ParseArguments {
         }
     }
 
-    public void startingParser(String[] args) throws ExceptionInInitializerError{
-        String arguments[] = args;
-        try{
-        if(arguments.length == 0){
-            System.out.println("Error syntax. Please,use help-manager.");
-            System.exit(0);
-        }
-        else{
-           if(arguments.length > 5)
-           {
-               System.out.println("So much arguments in function invoke. Please,use help-manager.");
-               System.exit(0);
-           }
-           else{
-             if(arguments[0].equals("add")) checkArgumentforAdd(arguments);
-             else if (arguments[0].equals("find")) checkArgumentforFind(arguments);
-             else if (arguments[0].equals("list")) checkArgumentforList(arguments);
-             else if (arguments[0].equals("help"))  checkArgumentforHelp(arguments);
-               else {
-                 System.out.println("Error syntax. Please,use help-manager.");
-                 System.exit(0);
-             }
-           }
-        }
-    }catch (ExceptionInInitializerError exceptionInInitializerError){
-            System.out.println(exceptionInInitializerError);
-        }
-        catch (Exception e){
-            System.out.println(e);
-        }
-    }
 
     public ParseArguments checkArgumentforHelp(String[] arguments) throws Exception {
         ParseArguments parseArguments = null;

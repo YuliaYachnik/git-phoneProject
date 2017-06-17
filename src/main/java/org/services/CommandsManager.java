@@ -6,7 +6,6 @@ package org.services;
 public class CommandsManager {
     Command command;
 
-    public
 
     public void run(){
         command.execute();
