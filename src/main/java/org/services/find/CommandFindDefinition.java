@@ -11,8 +11,6 @@ import java.util.ArrayList;
 public class CommandFindDefinition {
     private ArrayList<Data> personFindOut = new ArrayList<Data>();
 
-    public CommandFindDefinition(){}
-
     public void find(ParseArguments parseArguments) {
         try {
             if (parseArguments == null)

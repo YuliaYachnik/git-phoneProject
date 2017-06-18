@@ -41,8 +41,7 @@ public class FileWorker {
         try {
             ArrayList<Data> personList = new ArrayList<Data>();
             ArrayList<String> str = new ArrayList<String>();
-            if (!folder.exists())
-                throw new FileNotFoundException();
+            if (!folder.exists()) throw new FileNotFoundException();
             String buf;
             while ((buf = bufferedReader.readLine()) != null) {
                 str = parseStringtoArray(buf);
@@ -77,8 +76,7 @@ public class FileWorker {
         try {
             ArrayList<Data> personList = new ArrayList<Data>();
             ArrayList<String> str = new ArrayList<String>();
-            if (!folder.exists())
-                throw new FileNotFoundException();
+            if (!folder.exists()) throw new FileNotFoundException();
             String buf;
             while ((buf = bufferedReader.readLine()) != null) {
                 str = parseStringtoArrayWithFind(buf, name);

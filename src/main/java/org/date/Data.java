@@ -5,12 +5,7 @@ public class Data {
     private String phone;
     private String fileName;
     private String dirName;
-
-    public Data() {
-    }
-
-    ;
-
+    
     public Data(String name, String phone, String fileName, String dirName) {
         this.name = name;
         this.phone = phone;

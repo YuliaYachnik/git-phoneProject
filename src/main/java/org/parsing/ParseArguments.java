@@ -3,7 +3,7 @@ package org.parsing;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public  class ParseArguments {
+public class ParseArguments {
 
     private String name = "";
     private String phone = "";
@@ -45,11 +45,11 @@ public  class ParseArguments {
     public ParseArguments() {
     }
 
-   public ParseArguments(String name) {
+    public ParseArguments(String name) {
         this.name = name;
     }
 
-   public ParseArguments(String name, String phone, String file, String filedir) {
+    public ParseArguments(String name, String phone, String file, String filedir) {
         this.name = name;
         this.phone = phone;
         this.file = file;
@@ -123,39 +123,17 @@ public  class ParseArguments {
         }
     }
 
-
-    public ParseArguments checkArgumentforHelp(String args[]) throws Exception {
-        ParseArguments parseArguments = null;
-        try {
-            int countArguments = args.length;
-            if (countArguments == 0)
-                System.out.println("No parameters have been entered.Please,use help-manager. ");
-            else {
-                if ((args[0].equals("help") || args[0].equals("Help")) && countArguments > 1)
-                    throw new ExceptionInInitializerError();
-                if (args[0].equals("help") || args[0].equals("Help")) {
-                    parseArguments = new ParseArguments();
-                }
-            }
-            return parseArguments;
-        } catch (ExceptionInInitializerError exceptionInInitializerError) {
-            System.out.println("Error of Initializing parameters.Please,use help-manager");
-            return null;
-        }
-    }
-
     public ParseArguments checkArgumentForList(String args[]) throws Exception {
         ParseArguments parseArguments = null;
         try {
             int countArguments = args.length;
             if (countArguments == 1) parseArguments = new ParseArguments();
-            else if (countArguments == 2 ||countArguments > 3 ) throw new ExceptionInInitializerError();
+            else if (countArguments == 2 || countArguments > 3) throw new ExceptionInInitializerError();
             else if (countArguments == 3) {
                 parseArguments = new ParseArguments();
                 parseArguments.setFile(getFileName(args[1]));
                 parseArguments.setFiledir(getFileDir(args[2]));
-            }
-            else throw new ExceptionInInitializerError();
+            } else throw new ExceptionInInitializerError();
             return parseArguments;
         } catch (NullPointerException e) {
             System.out.println("Error with passing parameters to the command line.Please,use help-manager");
@@ -166,13 +144,13 @@ public  class ParseArguments {
         }
     }
 
-   public ParseArguments checkArgumentForFind(String args[]) throws Exception {
+    public ParseArguments checkArgumentForFind(String args[]) throws Exception {
         ParseArguments parseArguments = null;
         try {
             int countArguments = args.length;
             if (countArguments < 2 || countArguments == 3)
                 throw new ExceptionInInitializerError();
-            else if ( countArguments == 2) {
+            else if (countArguments == 2) {
                 String bufName = getName(args[1]);
                 if (bufName == null) throw new NullPointerException();
                 else parseArguments = new ParseArguments(getName(args[1]));
@@ -203,23 +181,18 @@ public  class ParseArguments {
         ParseArguments parseArguments = null;
         int countArguments = args.length;
         try {
-             if (countArguments < 3)
-                throw new NullPointerException();
-            else if ( countArguments == 3) {
+            if (countArguments < 3) throw new NullPointerException();
+            else if (countArguments == 3) {
                 String bufName = getName(args[1]);
                 String bufPhone = getPhone(args[2]);
-                if (bufName == null || bufPhone == null)
-                    throw new NullPointerException();
-                else
-                    parseArguments = new ParseArguments(getName(args[1]), getPhone(args[2]));
-            } else if ( countArguments == 4) {
+                if (bufName == null || bufPhone == null) throw new NullPointerException();
+                else parseArguments = new ParseArguments(getName(args[1]), getPhone(args[2]));
+            } else if (countArguments == 4) {
                 String bufName = getName(args[1]);
                 String bufPhone = getPhone(args[2]);
                 String bufFileName = getFileName(args[3]);
-                if (bufName == null || bufPhone == null || bufFileName == null)
-                    throw new NullPointerException();
-                else
-                    parseArguments = new ParseArguments(getName(args[1]), getPhone(args[2]), getFileName(args[3]));
+                if (bufName == null || bufPhone == null || bufFileName == null) throw new NullPointerException();
+                else parseArguments = new ParseArguments(getName(args[1]), getPhone(args[2]), getFileName(args[3]));
             } else if (countArguments == 5) {
                 String bufName = getName(args[1]);
                 String bufPhone = getPhone(args[2]);
@@ -241,7 +214,7 @@ public  class ParseArguments {
     }
 
 
-   public static boolean checkFileName(String str) {
+    public static boolean checkFileName(String str) {
         Pattern p = Pattern.compile("\\[--filename=.+\\.txt\\]");
         Matcher m = p.matcher(str);
         return m.matches();

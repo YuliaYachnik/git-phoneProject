@@ -2,12 +2,15 @@ package org.services.add;
 
 import org.parsing.ParseArguments;
 import org.services.Command;
+import org.services.help.CommandAddDefinitionToHelp;
+import org.services.help.CommandDefinitionToHelp;
 
 /**
  * Created by Юлия on 16.06.2017.
  */
 public class AddCommandImpl implements Command {
     private CommandAddDefinition commandAddDefinition;
+    private CommandDefinitionToHelp commandDefinitionToHelp;
     private  ParseArguments parseArguments;
 
     public AddCommandImpl(ParseArguments parseArguments, CommandAddDefinition commandAddDefinition){
@@ -16,6 +19,7 @@ public class AddCommandImpl implements Command {
     }
 
     public void execute() {
-        commandAddDefinition.add(parseArguments);
+        if(parseArguments != null) commandAddDefinition.add(parseArguments);
+        else commandDefinitionToHelp = new CommandAddDefinitionToHelp().executeHelp();
     }
 }

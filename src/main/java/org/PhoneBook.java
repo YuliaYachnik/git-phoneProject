@@ -1,9 +1,9 @@
 package org;
 
-import org.parsing.ParseMethodName;
+import org.parsing.ParseStartingMethodName;
 
 public class PhoneBook {
     public static void main(String args[]) {
-        ParseMethodName parseMethodName = new ParseMethodName.ParseMethodNameBilder(args).build().run();
+        ParseStartingMethodName parseStartingMethodName = new ParseStartingMethodName.ParseStartingMethodNameBuilder(args).build().run();
     }
 }

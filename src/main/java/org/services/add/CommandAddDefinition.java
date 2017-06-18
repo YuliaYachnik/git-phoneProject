@@ -10,8 +10,6 @@ public class CommandAddDefinition {
 
     private ArrayList<Data> person = new ArrayList<Data>();
 
-    public CommandAddDefinition() {}
-
     public void add(ParseArguments parseArguments) {
         try {
             if (parseArguments == null)

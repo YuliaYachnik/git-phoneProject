@@ -2,12 +2,15 @@ package org.services.find;
 
 import org.parsing.ParseArguments;
 import org.services.Command;
+import org.services.help.CommandDefinitionToHelp;
+import org.services.help.CommandFindDefinitionToHelp;
 
 /**
  * Created by Юлия on 16.06.2017.
  */
 public class FindCommandImpl implements Command {
     private CommandFindDefinition commandFindDefinition;
+    private CommandDefinitionToHelp commandDefinitionToHelp;
     private ParseArguments parseArguments;
 
     public FindCommandImpl(CommandFindDefinition commandFindDefinition, ParseArguments parseArguments) {
@@ -16,7 +19,7 @@ public class FindCommandImpl implements Command {
     }
 
     public void execute() {
-        commandFindDefinition.find(parseArguments);
-
+        if(parseArguments != null) commandFindDefinition.find(parseArguments);
+        else commandDefinitionToHelp = new CommandFindDefinitionToHelp().executeHelp();
     }
 }
