@@ -1,8 +1,6 @@
 package org.fileworking;
 
-
 import org.date.Data;
-
 import java.io.*;
 import java.util.ArrayList;
 
@@ -11,7 +9,7 @@ public class FileWorker {
 
     public void writeFile(Data data) throws FileNotFoundException, UnsupportedEncodingException {
         File folder = new File(pass + data.getDirName());
-        if (!folder.exists()) {
+        if (!folder.exists()){
             folder.mkdir();
         }
         FileOutputStream fileOutputStream = new FileOutputStream(folder + File.separator + data.getFileName(), true);
@@ -23,7 +21,7 @@ public class FileWorker {
             bufferedWriter.newLine();
         } catch (IOException e) {
             System.out.println("Error with writing data to file.Please,use help-manager");
-        } finally {
+        }finally {
             try {
                 bufferedWriter.close();
                 fileOutputStream.close();
@@ -55,14 +53,14 @@ public class FileWorker {
             System.out.println("Not a valid path to file.Please,use help-manager");
             return null;
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            System.out.println("Exception with reading from file. Please,use help-manager");
             return null;
         } finally {
             try {
                 bufferedReader.close();
 
             } catch (IOException ex) {
-                System.out.println(ex);
+                System.out.println("Exception with reading from file. Please,use help-manager");
                 return null;
             }
         }
@@ -90,14 +88,14 @@ public class FileWorker {
             System.out.println("Not a valid path to file.Please,use help-manager");
             return null;
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+            System.out.println("Exception with reading from file. Please,use help-manager");
             return null;
         } finally {
             try {
                 bufferedReader.close();
 
             } catch (IOException ex) {
-                System.out.println(ex);
+                System.out.println("Exception with reading from file. Please,use help-manager");
                 return null;
             }
         }

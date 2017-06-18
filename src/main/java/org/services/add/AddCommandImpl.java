@@ -20,6 +20,9 @@ public class AddCommandImpl implements Command {
 
     public void execute() {
         if(parseArguments != null) commandAddDefinition.add(parseArguments);
-        else commandDefinitionToHelp = new CommandAddDefinitionToHelp().executeHelp();
+        else {
+            commandDefinitionToHelp = new CommandAddDefinitionToHelp().executeHelp();
+            System.exit(0);
+        }
     }
 }

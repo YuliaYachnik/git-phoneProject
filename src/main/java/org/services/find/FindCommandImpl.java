@@ -20,6 +20,9 @@ public class FindCommandImpl implements Command {
 
     public void execute() {
         if(parseArguments != null) commandFindDefinition.find(parseArguments);
-        else commandDefinitionToHelp = new CommandFindDefinitionToHelp().executeHelp();
+        else{
+            commandDefinitionToHelp = new CommandFindDefinitionToHelp().executeHelp();
+            System.exit(0);
+        }
     }
 }

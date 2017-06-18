@@ -56,9 +56,9 @@ public class ParseStartingMethodName {
                 }
             }
         } catch (ExceptionInInitializerError exceptionInInitializerError) {
-            System.out.println(exceptionInInitializerError);
+            System.out.println("Error of Initializing parameters.Please,use help-manager.");
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("Error of Initializing parameters.Please,use help-manager.");
         }
         return command;
     }

@@ -20,6 +20,9 @@ public class ListCommandImpl implements Command{
 
     public void execute() {
         if(parseArguments != null) commandListDefinition.list(parseArguments);
-        else commandDefinitionToHelp = new CommandListDefinitionToHelp().executeHelp();
+        else {
+            commandDefinitionToHelp = new CommandListDefinitionToHelp().executeHelp();
+            System.exit(0);
+        }
     }
 }

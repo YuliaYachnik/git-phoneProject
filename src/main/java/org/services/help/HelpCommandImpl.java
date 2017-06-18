@@ -14,5 +14,6 @@ public class HelpCommandImpl implements Command {
 
     public void execute() {
         commandDefinitionToHelp = new CommandHelpDefinitionToHelp().executeHelp() ;
+        System.exit(0);
     }
 }
