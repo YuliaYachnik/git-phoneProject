@@ -10,9 +10,4 @@ public class PhoneBookApplication {
     public void run(){
 
     }
-    public static void main(String args[]) {
-
-       // PhoneBookApplication phoneBookApplication = new
-              //  PhoneBookApplicationBuilder().withCommands(commandDefinition).;
-    }
 }
