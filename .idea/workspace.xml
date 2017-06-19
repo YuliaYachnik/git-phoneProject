@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb57720d-9acd-45f0-be19-b84ceff9a992" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/parsing/ParseArguments.java" afterPath="$PROJECT_DIR$/src/main/java/org/parsing/ParseArguments.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/services/add/AddCommandImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/services/add/AddCommandImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/services/find/FindCommandImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/services/find/FindCommandImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/services/help/HelpCommandImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/services/help/HelpCommandImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/services/list/ListCommandImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/services/list/ListCommandImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/org/PhoneBook.java" afterPath="$PROJECT_DIR$/src/main/java/org/PhoneBookApplication.java" />
     </list>
     <ignored path="PhoneBook Application.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,22 +32,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PhoneBook.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBook.java">
+      <file leaf-file-name="PhoneBookApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBookApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParseStartingMethodName.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/parsing/ParseStartingMethodName.java">
+      <file leaf-file-name="PhoneBookApplicationBuilder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBookApplicationBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
-              <caret line="60" column="92" selection-start-line="60" selection-start-column="92" selection-end-line="60" selection-end-column="92" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#472#473#0" expanded="true" />
+                <element signature="e#515#516#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,8 +61,8 @@
       <file leaf-file-name="ParseArguments.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/parsing/ParseArguments.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="213" column="5" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="5" />
+            <state relative-caret-position="280">
+              <caret line="260" column="5" selection-start-line="245" selection-start-column="3" selection-end-line="260" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#ParseArguments#0;class#ParseArguments#0" expanded="false" />
@@ -58,21 +70,15 @@
                 <element signature="method#toString#0;class#ParseArguments#0" expanded="false" />
                 <element signature="method#ParseArguments#3;class#ParseArguments#0" expanded="false" />
                 <element signature="method#ParseArguments#4;class#ParseArguments#0" expanded="false" />
-                <element signature="method#checkNameSymbol#0;class#ParseArguments#0" expanded="false" />
-                <element signature="method#getName#1;class#ParseArguments#0" expanded="false" />
-                <element signature="method#checkPhoneSymbol#0;class#ParseArguments#0" expanded="false" />
-                <element signature="method#getPhone#1;class#ParseArguments#0" expanded="false" />
-                <element signature="method#checkArgumentForList#0;class#ParseArguments#0" expanded="false" />
                 <element signature="method#checkArgumentForFind#0;class#ParseArguments#0" expanded="false" />
-                <element signature="method#checkFileName#0;class#ParseArguments#0" expanded="false" />
-                <element signature="method#checkFileDir#0;class#ParseArguments#0" expanded="false" />
+                <element signature="method#checkArgumentForAdd#0;class#ParseArguments#0" expanded="false" />
                 <element signature="method#getFileName#0;class#ParseArguments#0" expanded="false" />
-                <element signature="method#getFileDir#0;class#ParseArguments#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -115,20 +121,40 @@
       </file>
       <file leaf-file-name="CommandListDefinition.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/services/list/CommandListDefinition.java">
+=======
+      <file leaf-file-name="CommandDefinition.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/services/CommandDefinition.java">
+>>>>>>> branchOne
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="969">
+              <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#839#840#0" expanded="true" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#1073#1074#0" expanded="true" />
+                <element signature="e#1111#1112#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ListCommandImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/services/list/ListCommandImpl.java">
+      <file leaf-file-name="ParametrsDefinition.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/services/ParametrsDefinition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="595">
+              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#checkNameSymbol#0;class#ParametrsDefinition#0" expanded="false" />
+                <element signature="method#getName#0;class#ParametrsDefinition#0" expanded="false" />
+                <element signature="method#checkFileDir#0;class#ParametrsDefinition#0" expanded="false" />
+                <element signature="method#getFileDir#0;class#ParametrsDefinition#0" expanded="false" />
+                <element signature="method#checkPhoneSymbol#0;class#ParametrsDefinition#0" expanded="false" />
+                <element signature="method#getPhone#0;class#ParametrsDefinition#0" expanded="false" />
+                <element signature="method#checkFileName#0;class#ParametrsDefinition#0" expanded="false" />
+                <element signature="method#getFileName#0;class#ParametrsDefinition#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -192,7 +218,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/services/CommandsManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/parsing/ParseMethodName.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/services/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/parsing/ParseArguments.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/date/Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/services/add/CommandAddDefinition.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/services/find/CommandFindDefinition.java" />
@@ -206,14 +231,26 @@
         <option value="$PROJECT_DIR$/src/main/java/org/services/help/CommandHelpDefinitionToHelp.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/services/help/CommandListDefinitionToHelp.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/PhoneBook.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/fileworking/FileWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/parsing/ParseStartingMethodName.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/org/parsing/ParseArguments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/services/CommandClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/services/add/AddCommandImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/services/find/FindCommandImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/services/help/HelpCommandImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/services/list/ListCommandImpl.java" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/org/fileworking/FileWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/parsing/ParseStartingMethodName.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+=======
+        <option value="$PROJECT_DIR$/src/main/java/org/services/ParametrsDefinition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/PhoneBookApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/PhoneBookApplicationBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/services/CommandDefinition.java" />
+>>>>>>> branchOne
       </list>
     </option>
   </component>
@@ -271,6 +308,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -407,74 +446,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="list" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhoneBookApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhoneBookApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="help" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhoneBookApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PhoneBookApplication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="org" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="find" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -560,8 +531,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1014,7 +983,7 @@
     </configuration>
     <configuration default="false" name="Unnamed" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="org.PhoneBook" />
+      <option name="MAIN_CLASS_NAME" value="org.PhoneBookApplication" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="add --name=Igor --phone=123432 [filename=boys.txt]" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -1057,15 +1026,24 @@
       <workItem from="1497778274315" duration="7285000" />
       <workItem from="1497786743875" duration="217000" />
       <workItem from="1497845531000" duration="326000" />
+<<<<<<< HEAD
       <workItem from="1497852129934" duration="910000" />
+=======
+      <workItem from="1497852129934" duration="699000" />
+      <workItem from="1497856013177" duration="11132000" />
+>>>>>>> branchOne
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="106627000" />
 =======
     <option name="totallyTimeSpent" value="106450000" />
+>>>>>>> branchOne
+=======
+    <option name="totallyTimeSpent" value="117582000" />
 >>>>>>> branchOne
   </component>
   <component name="TodoView">
@@ -1078,7 +1056,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1086,13 +1064,13 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2618658" sideWeight="0.2065053" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10892587" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26143792" sideWeight="0.7934947" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11043873" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26143792" sideWeight="0.7934947" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.72087747" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30786687" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2708018" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1138,7 +1116,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="75" />
+      <option name="time" value="76" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1147,54 +1125,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="77" selection-start-line="23" selection-start-column="77" selection-end-line="23" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/parsing/ParseArguments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="90" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#ParseArguments#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#ParseArguments#2;class#ParseArguments#0" expanded="false" />
-            <element signature="method#toString#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#ParseArguments#3;class#ParseArguments#0" expanded="false" />
-            <element signature="method#ParseArguments#4;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkNameSymbol#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getName#1;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkPhoneSymbol#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getPhone#1;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkArgumentForList#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkArgumentForFind#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkFileName#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkFileDir#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getFileName#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getFileDir#0;class#ParseArguments#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/fileworking/FileWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/add/CommandAddDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="78" column="72" selection-start-line="78" selection-start-column="72" selection-end-line="78" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/services/Command.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1209,11 +1139,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBook.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBookApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1228,16 +1160,9 @@
             <element signature="method#toString#0;class#ParseArguments#0" expanded="false" />
             <element signature="method#ParseArguments#3;class#ParseArguments#0" expanded="false" />
             <element signature="method#ParseArguments#4;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkNameSymbol#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getName#1;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkPhoneSymbol#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getPhone#1;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkArgumentForList#0;class#ParseArguments#0" expanded="false" />
             <element signature="method#checkArgumentForFind#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkFileName#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkFileDir#0;class#ParseArguments#0" expanded="false" />
+            <element signature="method#checkArgumentForAdd#0;class#ParseArguments#0" expanded="false" />
             <element signature="method#getFileName#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getFileDir#0;class#ParseArguments#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1396,16 +1321,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/add/AddCommandImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/services/add/CommandAddDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1452,74 +1367,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/help/HelpCommandImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/services/list/CommandListDefinition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/list/ListCommandImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/help/CommandFindDefinitionToHelp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/find/FindCommandImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/find/CommandFindDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBook.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/parsing/ParseStartingMethodName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="60" column="92" selection-start-line="60" selection-start-column="92" selection-end-line="60" selection-end-column="92" />
           <folding />
         </state>
       </provider>
@@ -1540,10 +1391,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/parsing/ParseStartingMethodName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="56" column="13" selection-start-line="28" selection-start-column="11" selection-end-line="56" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/find/CommandFindDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/CommandClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/help/HelpCommandImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/list/ListCommandImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/help/CommandFindDefinitionToHelp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/add/AddCommandImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/find/FindCommandImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/parsing/ParseArguments.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="213" column="5" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="5" />
+        <state relative-caret-position="280">
+          <caret line="260" column="5" selection-start-line="245" selection-start-column="3" selection-end-line="260" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#ParseArguments#0;class#ParseArguments#0" expanded="false" />
@@ -1551,16 +1474,63 @@
             <element signature="method#toString#0;class#ParseArguments#0" expanded="false" />
             <element signature="method#ParseArguments#3;class#ParseArguments#0" expanded="false" />
             <element signature="method#ParseArguments#4;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkNameSymbol#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getName#1;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkPhoneSymbol#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getPhone#1;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkArgumentForList#0;class#ParseArguments#0" expanded="false" />
             <element signature="method#checkArgumentForFind#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkFileName#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#checkFileDir#0;class#ParseArguments#0" expanded="false" />
+            <element signature="method#checkArgumentForAdd#0;class#ParseArguments#0" expanded="false" />
             <element signature="method#getFileName#0;class#ParseArguments#0" expanded="false" />
-            <element signature="method#getFileDir#0;class#ParseArguments#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/ParametrsDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#checkNameSymbol#0;class#ParametrsDefinition#0" expanded="false" />
+            <element signature="method#getName#0;class#ParametrsDefinition#0" expanded="false" />
+            <element signature="method#checkFileDir#0;class#ParametrsDefinition#0" expanded="false" />
+            <element signature="method#getFileDir#0;class#ParametrsDefinition#0" expanded="false" />
+            <element signature="method#checkPhoneSymbol#0;class#ParametrsDefinition#0" expanded="false" />
+            <element signature="method#getPhone#0;class#ParametrsDefinition#0" expanded="false" />
+            <element signature="method#checkFileName#0;class#ParametrsDefinition#0" expanded="false" />
+            <element signature="method#getFileName#0;class#ParametrsDefinition#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBookApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/PhoneBookApplicationBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="54" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/services/CommandDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
           </folding>
         </state>
       </provider>

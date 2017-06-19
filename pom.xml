@@ -19,7 +19,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>org.PhoneBook</mainClass>
+                            <mainClass>org.PhoneBookApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
