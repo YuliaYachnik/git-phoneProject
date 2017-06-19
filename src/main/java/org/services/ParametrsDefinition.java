@@ -17,7 +17,7 @@ public class ParametrsDefinition {
         this.value = value;
     }
 
-    public static boolean checkNameSymbol(String str) {
+  /*  public static boolean checkNameSymbol(String str) {
         Pattern p = Pattern.compile("^--name=+[a-zA-ZА-Яа-я]{3,15}$");
         Matcher m = p.matcher(str);
         return m.matches();
@@ -109,7 +109,7 @@ public class ParametrsDefinition {
     }
 
     public ParametrsDefinition parseParematrs(String args[]){
-
+*/
     }
-}
+
 

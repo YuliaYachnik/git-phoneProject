@@ -23,9 +23,6 @@ public class CommandDefinition {
     private List<ParametrsDefinition> parametrsDefinitions;
     private Command command;
 
-    public CommandDefinition() throws Exception {}
-
-
     public void setName(String name) {
         this.name = name;
     }
@@ -34,11 +31,17 @@ public class CommandDefinition {
         this.parametrsDefinitions = parametrsDefinitions;
     }
 
+    public CommandDefinition(String name, List<ParametrsDefinition> parametrsDefinitions, Command command) {
+        this.name = name;
+        this.parametrsDefinitions = parametrsDefinitions;
+        this.command = command;
+    }
+
     public void setCommand(Command command) {
         this.command = command;
     }
 
-    public boolean validation(String args[]){
+  /*  public boolean validation(String args[]){
         if (args.length == 0 || args.length > 5)
             return false;
         else return true;
@@ -85,5 +88,5 @@ public class CommandDefinition {
 
         }
         return commandDefinition;
-        }
+        }*/
 }

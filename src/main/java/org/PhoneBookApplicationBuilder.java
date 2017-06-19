@@ -16,7 +16,7 @@ public class PhoneBookApplicationBuilder {
         return phoneBookApplication;
     }
 
-    public PhoneBookApplication withCommands(CommandDefinition commandDefinition){
-        return phoneBookApplication;
+    public PhoneBookApplicationBuilder withCommands(CommandDefinition commandDefinition){
+        return this;
     }
 }
