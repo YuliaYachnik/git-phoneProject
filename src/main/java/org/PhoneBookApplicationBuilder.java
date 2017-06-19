@@ -9,14 +9,17 @@ import java.util.Map;
  * Created by Юлия on 19.06.2017.
  */
 public class PhoneBookApplicationBuilder {
-    private PhoneBookApplication phoneBookApplication;
 
     public PhoneBookApplication build(){
-        phoneBookApplication = new PhoneBookApplication();
-        return phoneBookApplication;
+       return new PhoneBookApplication();
     }
 
     public PhoneBookApplicationBuilder withCommands(CommandDefinition commandDefinition){
+
+        return this;
+    }
+
+    public PhoneBookApplicationBuilder withConfig(Map<String,String> params){
         return this;
     }
 }

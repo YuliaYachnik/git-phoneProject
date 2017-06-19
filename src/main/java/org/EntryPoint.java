@@ -6,7 +6,9 @@ import org.services.ParametrsDefinition;
 import org.services.add.AddCommandImpl;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by Юлия on 19.06.2017.
@@ -19,9 +21,13 @@ public class EntryPoint {
         List<ParametrsDefinition> parametrsDefinitions = new ArrayList<ParametrsDefinition>();
         parametrsDefinitions.add(parametrsDefinition);
         parametrsDefinitions.add(parametrsDefinition1);
-        Command command = new AddCommandImpl();
+        Command <AddCommandImpl> command = new Command <AddCommandImpl>();
+        Map<String,String> params = new HashMap<String, String>();
+        params.put("--dirname","mydir");
+        params.put("--filename","myfile.txt");
 
          PhoneBookApplication phoneBookApplication = new
-          PhoneBookApplicationBuilder().withCommands(new CommandDefinition("add", parametrsDefinitions,command)).build();
+          PhoneBookApplicationBuilder().withCommands(new CommandDefinition("add", parametrsDefinitions,command)).withConfig(params).build();
+        phoneBookApplication.run();
     }
 }
