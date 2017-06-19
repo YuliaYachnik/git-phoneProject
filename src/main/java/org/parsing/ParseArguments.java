@@ -77,12 +77,6 @@ public class ParseArguments {
         this.phone = phone;
     }
 
-    public static boolean checkNameSymbol(String str) {
-        Pattern p = Pattern.compile("^--name=+[a-zA-ZА-Яа-я]{3,15}$");
-        Matcher m = p.matcher(str);
-        return m.matches();
-    }
-
     public String getName(String str) throws Exception {
         try {
             String returnName = "";
@@ -98,12 +92,6 @@ public class ParseArguments {
             System.out.println("Incorrect name data.Please,use help-manager.");
             return null;
         }
-    }
-
-    public static boolean checkPhoneSymbol(String str) {
-        Pattern p = Pattern.compile("^--phone=+[0-9]{3,20}$");
-        Matcher m = p.matcher(str);
-        return m.matches();
     }
 
     public String getPhone(String str) throws Exception {
@@ -222,6 +210,18 @@ public class ParseArguments {
 
     public static boolean checkFileDir(String str) {
         Pattern p = Pattern.compile("\\[--dirname=+[a-zA-ZА-Яа-я0-9]{3,15}\\]");
+        Matcher m = p.matcher(str);
+        return m.matches();
+    }
+
+    public static boolean checkPhoneSymbol(String str) {
+        Pattern p = Pattern.compile("^--phone=+[0-9]{3,20}$");
+        Matcher m = p.matcher(str);
+        return m.matches();
+    }
+
+    public static boolean checkNameSymbol(String str) {
+        Pattern p = Pattern.compile("^--name=+[a-zA-ZА-Яа-я]{3,15}$");
         Matcher m = p.matcher(str);
         return m.matches();
     }

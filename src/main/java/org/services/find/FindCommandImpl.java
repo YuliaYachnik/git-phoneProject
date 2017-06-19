@@ -17,6 +17,7 @@ public class FindCommandImpl implements Command {
         this.commandFindDefinition = commandFindDefinition;
         this.parseArguments = parseArguments;
     }
+    public FindCommandImpl(){}
 
     public void execute() {
         if(parseArguments != null) commandFindDefinition.find(parseArguments);
