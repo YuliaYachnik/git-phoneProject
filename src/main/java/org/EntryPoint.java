@@ -14,14 +14,15 @@ import java.util.Map;
  * Created by Юлия on 19.06.2017.
  */
 public class EntryPoint {
-    public static void main(String args[]) {
+    public static void main(String args[]) throws ClassNotFoundException {
 
         ParametrsDefinition parametrsDefinition = new ParametrsDefinition("name","Ivan");
         ParametrsDefinition parametrsDefinition1 = new ParametrsDefinition("phone","12345");
         List<ParametrsDefinition> parametrsDefinitions = new ArrayList<ParametrsDefinition>();
         parametrsDefinitions.add(parametrsDefinition);
         parametrsDefinitions.add(parametrsDefinition1);
-        Command <AddCommandImpl> command = new Command <AddCommandImpl>();
+        Class command = Class.forName("AddCommandImpl");
+        
         Map<String,String> params = new HashMap<String, String>();
         params.put("--dirname","mydir");
         params.put("--filename","myfile.txt");
