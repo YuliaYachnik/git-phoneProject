@@ -1,5 +1,5 @@
 package org.services;
 
-public interface Command {
-    public void execute();
+public class Command<T> {
+    public void execute(){};
 }

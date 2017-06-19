@@ -1,45 +1,37 @@
 package org.services;
 
-import org.parsing.ParseArguments;
-import org.services.add.AddCommandImpl;
-import org.services.add.CommandAddDefinition;
-import org.services.find.CommandFindDefinition;
-import org.services.find.FindCommandImpl;
-import org.services.help.CommandDefinitionToHelp;
-import org.services.help.CommandHelpDefinitionToHelp;
-import org.services.help.HelpCommandImpl;
-import org.services.list.CommandListDefinition;
-import org.services.list.ListCommandImpl;
-
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by Юлия on 19.06.2017.
  */
 public class CommandDefinition {
     private String name;
-    private List<ParametrsDefinition> parametrsDefinitions;
-    private Command command;
+    private List<ParametrsDefinition> parametrDefinitions;
+    private Command <Command> command;
+
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setParametrsDefinitions(List<ParametrsDefinition> parametrsDefinitions) {
-        this.parametrsDefinitions = parametrsDefinitions;
+    public void setParametrDefinitions(List<ParametrsDefinition> parametrDefinitions) {
+        this.parametrDefinitions = parametrDefinitions;
     }
 
-    public CommandDefinition(String name, List<ParametrsDefinition> parametrsDefinitions, Command command) {
+    public CommandDefinition(String name, List<ParametrsDefinition> parametrDefinitions,Command<Command> command) {
         this.name = name;
-        this.parametrsDefinitions = parametrsDefinitions;
+        this.parametrDefinitions = parametrDefinitions;
         this.command = command;
     }
 
-    public void setCommand(Command command) {
+    public void setCommand(Command<Command> command) {
         this.command = command;
     }
+
+
+
+
 
   /*  public boolean validation(String args[]){
         if (args.length == 0 || args.length > 5)
@@ -65,7 +57,7 @@ public class CommandDefinition {
         if(args.length < 2) return parametrsDefinition = null;
         else{
            for(int i = 0; i < args.length + 1; i++) {
-               List <ParametrsDefinition> parametrsDefinitions;
+               List <ParametrsDefinition> parametrDefinitions;
 
 
                }
