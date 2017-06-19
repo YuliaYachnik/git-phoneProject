@@ -1,4 +1,3 @@
 /target
-.idea/*
-PhoneBook.iml
-.idea/workspace.xml
+.idea
+*.iml
