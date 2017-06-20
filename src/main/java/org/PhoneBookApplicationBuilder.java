@@ -15,7 +15,6 @@ public class PhoneBookApplicationBuilder {
     }
 
     public PhoneBookApplicationBuilder withCommands(CommandDefinition commandDefinition){
-
         return this;
     }
 
