@@ -7,19 +7,30 @@ import java.util.List;
  */
 public class CommandDefinition {
     private String name;
-    private List<ParametrsDefinition> parametrDefinitions;
+    private List<ParametrDefinitions> parametrDefinitions;
     private Class<Command> command;
 
+    public String getName() {
+        return name;
+    }
+
+    public List<ParametrDefinitions> getParametrDefinitions() {
+        return parametrDefinitions;
+    }
+
+    public Class<Command> getCommand() {
+        return command;
+    }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setParametrDefinitions(List<ParametrsDefinition> parametrDefinitions) {
+    public void setParametrDefinitions(List<ParametrDefinitions> parametrDefinitions) {
         this.parametrDefinitions = parametrDefinitions;
     }
 
-    public CommandDefinition(String name, List<ParametrsDefinition> parametrDefinitions,Class<Command> command) {
+    public CommandDefinition(String name, List<ParametrDefinitions> parametrDefinitions, Class<Command> command) {
         this.name = name;
         this.parametrDefinitions = parametrDefinitions;
         this.command = command;
@@ -52,12 +63,12 @@ public class CommandDefinition {
             return command;
     }
 
-    public ParametrsDefinition getParametrs(String args[]){
-        ParametrsDefinition parametrsDefinition;
+    public ParametrDefinitions getParametrs(String args[]){
+        ParametrDefinitions parametrsDefinition;
         if(args.length < 2) return parametrsDefinition = null;
         else{
            for(int i = 0; i < args.length + 1; i++) {
-               List <ParametrsDefinition> parametrDefinitions;
+               List <ParametrDefinitions> parametrDefinitions;
 
 
                }

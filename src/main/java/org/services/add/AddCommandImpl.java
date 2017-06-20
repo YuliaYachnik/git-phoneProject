@@ -8,7 +8,7 @@ import org.services.help.CommandDefinitionToHelp;
 /**
  * Created by Юлия on 16.06.2017.
  */
-public class AddCommandImpl extends Command{
+public class AddCommandImpl implements Command{
     private CommandAddDefinition commandAddDefinition;
     private CommandDefinitionToHelp commandDefinitionToHelp;
     private  ParseArguments parseArguments;
