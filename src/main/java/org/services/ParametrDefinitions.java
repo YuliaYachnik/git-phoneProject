@@ -6,15 +6,15 @@ import java.util.regex.Pattern;
 /**
  * Created by Юлия on 19.06.2017.
  */
-public class ParametrsDefinition {
+public class ParametrDefinitions {
     private String name;
-    private String value;
+    private boolean isOptional;
 
-    public ParametrsDefinition(){}
+    public ParametrDefinitions(){}
 
-    public ParametrsDefinition(String name, String value) {
+    public ParametrDefinitions(String name, boolean isOptional) {
         this.name = name;
-        this.value = value;
+        this.isOptional = isOptional;
     }
 
   /*  public static boolean checkNameSymbol(String str) {
@@ -108,7 +108,7 @@ public class ParametrsDefinition {
         }
     }
 
-    public ParametrsDefinition parseParematrs(String args[]){
+    public ParametrDefinitions parseParematrs(String args[]){
 */
     }
 
