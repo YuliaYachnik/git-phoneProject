@@ -21,7 +21,6 @@ public class ApplicationEntryPoint {
         Map<String,String>  map = new HashMap<String, String>();
         map.put("--filename","myfile.txt");
         map.put("--dir","myfile");
-   ;
 
 
          PhoneBookApplication phoneBookApplication = new PhoneBookApplicationBuilder()
